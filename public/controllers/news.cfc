@@ -7,8 +7,8 @@ component accessors="true" extends="abstract"{
 	// ------------------------ PUBLIC METHODS ------------------------ //		
 
 	void function article( required struct rc ){
-		param name="rc.slug" default="";
-		rc.Article = variables.NewsService.getArticleBySlug( rc.slug );
+		param name="rc.story" default="";
+		rc.Article = variables.NewsService.getArticleBySlug( rc.story );
 		if( rc.Article.isPersisted() ){
 			rc.MetaData.setMetaTitle( rc.Article.getMetaTitle() ); 
 			rc.MetaData.setMetaDescription( rc.Article.getMetaDescription() );
